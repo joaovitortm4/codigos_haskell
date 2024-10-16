@@ -1,1 +1,27 @@
+https://www.onlinegdb.com/online_haskell_compiler
+
+if = if                             then – então (mostra o print)
+elif = else if                  >=, <=, =, ==
+else = else                    !! – buscar elemento de uma lista em certa posição
+
+também temos o “case” com ”|” para criar as varias clausulas 
+
+“::” serve para indicar o tipo da expressão, função ou variável
+
+Numéricos: Int, Integer, Float, Double
+Booleanos: Bool (com valores True ou False)
+Caracteres: Char
+Listas: [Tipo]
+Tuplas: (Tipo1, Tipo2, ...)
+Tipos personalizados: você pode criar seus próprios tipos usando data.
+
+“IO”: indica que a função ou expressão em questão é uma ação de entrada/saída (Input/Output)
+“do”: executa um bloco de comandos, com ações 
+“putStr” = imprime uma string
+“putStrLn” = igual o anterior, mas adiciona uma nova linha após a impressão
+“<- getLine” = le a entrada do usuário e armazena na variável que aponta
+“readLn” = igual o anterior, mas converte a entrada do usuário para o tipo que você especificar
+“Show” = converte um valor para uma string (usamos no exercício do Profundo)
+“++” = concatena listas, seja para juntar listas numéricas, de caracteres, ou personalizar mensagem.  Não altera as listas usadas e não é funcional para grandes listas. Para isso, temos
+“fold” e “map”
 
