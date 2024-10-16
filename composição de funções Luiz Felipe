@@ -1,0 +1,25 @@
+-- Definindo a função de composição de funções
+composicaoFuncoesImpressa :: (Show a) => [a -> a] -> a -> IO a
+composicaoFuncoesImpressa [] valor = return valor -- retorna o valor atual
+composicaoFuncoesImpressa (f:fs) valor = do
+    let novoValor = f valor
+    print novoValor
+    composicaoFuncoesImpressa fs novoValor -- aplica próximas funções 
+
+f1 :: Int -> Int
+f1 x = x + 1
+
+f2 :: Int -> Int
+f2 x = x * 2
+
+f3 :: Int -> Int
+f3 x = x - 3
+
+
+main :: IO ()
+main = do
+    let funcoes = [f1, f2, f3] 
+    let valorInicial = 5 
+    putStrLn $ "Valor inicial: " ++ show valorInicial
+    resultadoFinal <- composicaoFuncoesImpressa funcoes valorInicial
+    putStrLn $ "Resultado final: " ++ show resultadoFinal
